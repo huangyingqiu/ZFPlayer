@@ -20,6 +20,11 @@ Pod::Spec.new do |s|
 #    s.static_framework = true
     s.default_subspec = 'Core'
     
+    s.pod_target_xcconfig = {
+        # 是否开启Bitcode
+        'ENABLE_BITCODE' => 'NO'
+    }
+
     s.subspec 'Core' do |core|
         core.source_files = 'ZFPlayer/Classes/Core/**/*'
         core.public_header_files = 'ZFPlayer/Classes/Core/**/*.h'
