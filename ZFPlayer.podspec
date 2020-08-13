@@ -20,10 +20,19 @@ Pod::Spec.new do |s|
     s.static_framework = true
     s.default_subspec = 'Core'
     
+#    s.vendored_frameworks = 'ZFPlayer/Classes/Framework/IJKMediaFramework.framework'
+    
+    # 忽略的文件夹路径
+#    s.exclude_files = 'MediaSDK-iOS/Classes/MediaSDKCore/Lib/**/*.h', 'MediaSDK-iOS/Classes/Modules/Player/Framework/**/*.h'
+    
     s.subspec 'Core' do |core|
         core.source_files = 'ZFPlayer/Classes/Core/**/*'
         core.public_header_files = 'ZFPlayer/Classes/Core/**/*.h'
         core.frameworks = 'UIKit', 'MediaPlayer', 'AVFoundation'
+        core.vendored_frameworks = 'ZFPlayer/Classes/Framework/IJKMediaFramework.framework'
+        core.libraries = 'c++', 'z', 'iconv'
+           # 依赖的系统Framework
+        core.frameworks = 'VideoToolbox', 'CoreMedia'   #'UIKit', 'MapKit'
     end
     
     s.subspec 'ControlView' do |controlView|
@@ -43,7 +52,7 @@ Pod::Spec.new do |s|
         ijkplayer.source_files = 'ZFPlayer/Classes/ijkplayer/*.{h,m}'
         ijkplayer.public_header_files = 'ZFPlayer/Classes/ijkplayer/*.h'
         ijkplayer.dependency 'ZFPlayer/Core'
-        ijkplayer.dependency 'IJKMediaFramework'
+#        ijkplayer.dependency 'IJKMediaFramework'
         ijkplayer.ios.deployment_target = '8.0'
     end
     
