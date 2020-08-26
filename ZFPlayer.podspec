@@ -17,8 +17,14 @@ Pod::Spec.new do |s|
     s.social_media_url = 'http://weibo.com/zifeng1300'
     s.ios.deployment_target = '7.0'
     s.requires_arc = true
-    s.static_framework = true
+#    s.static_framework = true
     s.default_subspec = 'Core'
+    
+    # Pod Target配置
+    s.pod_target_xcconfig = {
+        # 是否开启Bitcode
+        'ENABLE_BITCODE' => 'NO',
+    }
     
     s.subspec 'Core' do |core|
         core.source_files = 'ZFPlayer/Classes/Core/**/*'
@@ -43,7 +49,7 @@ Pod::Spec.new do |s|
         ijkplayer.source_files = 'ZFPlayer/Classes/ijkplayer/*.{h,m}'
         ijkplayer.public_header_files = 'ZFPlayer/Classes/ijkplayer/*.h'
         ijkplayer.dependency 'ZFPlayer/Core'
-        ijkplayer.dependency 'IJKMediaFramework'
+        ijkplayer.dependency 'YQIJKMediaFramework'
         ijkplayer.ios.deployment_target = '8.0'
     end
     

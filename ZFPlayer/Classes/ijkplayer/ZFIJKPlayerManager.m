@@ -28,7 +28,7 @@
 #else
 #import "ZFPlayer.h"
 #endif
-#if __has_include(<IJKMediaFramework/IJKMediaFramework.h>)
+#if __has_include(<IJKMediaFrameworkWithSSL/IJKMediaFrameworkWithSSL.h>)
 
 @interface ZFIJKPlayerManager ()
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
