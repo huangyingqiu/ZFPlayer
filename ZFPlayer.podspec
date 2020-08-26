@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'ZFPlayer'
-    s.version          = '3.5.5'
+    s.version          = '3.5.6'
     s.summary          = 'A good player made by renzifeng'
     s.homepage         = 'https://github.com/renzifeng/ZFPlayer'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
     s.pod_target_xcconfig = {
         # 是否开启Bitcode
         'ENABLE_BITCODE' => 'NO',
+        'VALID_ARCHS' => 'x86_64 arm64 arm64e'
     }
     
     s.subspec 'Core' do |core|

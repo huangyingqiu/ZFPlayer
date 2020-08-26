@@ -1,6 +1,6 @@
 {
   "name": "ZFPlayer",
-  "version": "3.4.3",
+  "version": "3.5.5",
   "summary": "A good player made by renzifeng",
   "homepage": "https://github.com/renzifeng/ZFPlayer",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/renzifeng/ZFPlayer.git",
-    "tag": "3.4.3"
+    "tag": "3.5.5"
   },
   "social_media_url": "http://weibo.com/zifeng1300",
   "platforms": {
@@ -21,7 +21,8 @@
   "requires_arc": true,
   "default_subspecs": "Core",
   "pod_target_xcconfig": {
-    "ENABLE_BITCODE": "NO"
+    "ENABLE_BITCODE": "NO",
+    "VALID_ARCHS": "x86_64 arm64 arm64e"
   },
   "subspecs": [
     {

@@ -1,11 +1,11 @@
 PODS:
   - FDFullscreenPopGesture (1.1)
   - MJRefresh (3.1.15.7)
-  - ZFPlayer/AVPlayer (3.4.3):
+  - ZFPlayer/AVPlayer (3.5.5):
     - ZFPlayer/Core
-  - ZFPlayer/ControlView (3.4.3):
+  - ZFPlayer/ControlView (3.5.5):
     - ZFPlayer/Core
-  - ZFPlayer/Core (3.4.3)
+  - ZFPlayer/Core (3.5.5)
 
 DEPENDENCIES:
   - FDFullscreenPopGesture
@@ -25,7 +25,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  ZFPlayer: dc26bcc8ba407178f960836913492077586ea291
+  ZFPlayer: ef5c8de63fa34bafcd6afbee92e6d57f53ea3e7b
 
 PODFILE CHECKSUM: ae3ac8643c10787cb34b5bda4711a8a556516da3
 
