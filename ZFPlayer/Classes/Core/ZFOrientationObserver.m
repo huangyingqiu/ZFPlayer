@@ -289,7 +289,11 @@
     
     if (animated) {
         [UIView animateWithDuration:self.duration animations:^{
-            self.view.transform = [self getTransformRotationAngle:orientation];
+            if (self.orientationCustomTransform) {
+                self.view.transform = self.orientationCustomTransform(self, self.isFullScreen);
+            }else {
+                self.view.transform = [self getTransformRotationAngle:orientation];
+            }
             [UIView animateWithDuration:self.duration animations:^{
                 self.view.frame = frame;
                 [self.view layoutIfNeeded];

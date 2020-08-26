@@ -89,6 +89,9 @@ typedef NS_OPTIONS(NSUInteger, ZFInterfaceOrientationMask) {
 /// The block invoked when player rotated.
 @property (nonatomic, copy, nullable) void(^orientationDidChanged)(ZFOrientationObserver *observer, BOOL isFullScreen);
 
+///  自定义调整旋转角度
+@property (nonatomic, copy, nullable) CGAffineTransform(^orientationCustomTransform)(ZFOrientationObserver *observer, BOOL isFullScreen);
+
 /// Full screen mode, the default landscape into full screen
 @property (nonatomic) ZFFullScreenMode fullScreenMode;
 
