@@ -530,7 +530,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				750670929024C714EAC9777A /* [CP] Copy Pods Resources */,
-				6AC7584886DA26E95392A0D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -628,24 +627,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6AC7584886DA26E95392A0D0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZFPlayer_Example/Pods-ZFPlayer_Example-frameworks.sh",
-				"${PODS_ROOT}/YQIJKMediaFramework/YQIJKMediaFramework/Classes/Framework/IJKMediaFrameworkWithSSL.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IJKMediaFrameworkWithSSL.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZFPlayer_Example/Pods-ZFPlayer_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		750670929024C714EAC9777A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

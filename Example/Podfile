@@ -7,6 +7,6 @@ target 'ZFPlayer_Example' do
 #    pod 'ZFPlayer', :path => '../'
     pod 'ZFPlayer/ControlView', :path => '../'
     pod 'ZFPlayer/AVPlayer', :path => '../'
-    pod 'ZFPlayer/ijkplayer', :path => '../'
+#    pod 'ZFPlayer/ijkplayer', :path => '../'
 #    pod 'ZFPlayer/KSYMediaPlayer', :path => '../'
 end
