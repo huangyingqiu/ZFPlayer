@@ -175,10 +175,10 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/IJKPlayerWithSSL/IJKMediaFrameworkWithSSL.framework"
+  install_framework "${PODS_ROOT}/YQIJKMediaFramework/YQIJKMediaFramework/Classes/Framework/IJKMediaFrameworkWithSSL.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_ROOT}/IJKPlayerWithSSL/IJKMediaFrameworkWithSSL.framework"
+  install_framework "${PODS_ROOT}/YQIJKMediaFramework/YQIJKMediaFramework/Classes/Framework/IJKMediaFrameworkWithSSL.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
