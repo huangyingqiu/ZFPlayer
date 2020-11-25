@@ -102,6 +102,7 @@
         [self prepareToPlay];
     } else {
         [self.player play];
+        if (self.timer) [self.timer setFireDate:[NSDate date]];
         self.player.playbackRate = self.rate;
         _isPlaying = YES;
         self.playState = ZFPlayerPlayStatePlaying;
@@ -109,6 +110,7 @@
 }
 
 - (void)pause {
+    if (self.timer) [self.timer setFireDate:[NSDate distantFuture]];
     [self.player pause];
     _isPlaying = NO;
     self.playState = ZFPlayerPlayStatePaused;
@@ -133,9 +135,9 @@
 }
 
 - (void)replay {
-    @weakify(self)
+    @zf_weakify(self)
     [self seekToTime:0 completionHandler:^(BOOL finished) {
-        @strongify(self)
+        @zf_strongify(self)
         if (finished) {
             [self play];
         }
@@ -234,8 +236,6 @@
         case IJKMPMovieFinishReasonPlaybackEnded: {
             ZFPlayerLog(@"playbackStateDidChange: 播放完毕: %d\n", reason);
             self.playState = ZFPlayerPlayStatePlayStopped;
-            [self.timer invalidate];
-            self.timer = nil;
             if (self.playerDidToEnd) self.playerDidToEnd(self);
         }
             break;
