@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'ZFPlayer'
-    s.version          = '4.1.3'
+    s.version          = '4.1.4'
     s.summary          = 'A good player made by renzifeng'
     s.homepage         = 'https://github.com/renzifeng/ZFPlayer'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -22,7 +22,8 @@ Pod::Spec.new do |s|
     
     s.pod_target_xcconfig = {
         # 是否开启Bitcode
-        'ENABLE_BITCODE' => 'NO'
+        'ENABLE_BITCODE' => 'NO',
+        'VALID_ARCHS' => 'armv7-apple-ios arm64 arm64e x86_64'
     }
 
     s.subspec 'Core' do |core|
@@ -48,7 +49,7 @@ Pod::Spec.new do |s|
         ijkplayer.source_files = 'ZFPlayer/Classes/ijkplayer/*.{h,m}'
         ijkplayer.public_header_files = 'ZFPlayer/Classes/ijkplayer/*.h'
         ijkplayer.dependency 'ZFPlayer/Core'
-        ijkplayer.dependency 'YQIJKMediaFramework', '~> 0.1.5'
+        ijkplayer.dependency 'YQIJKMediaFramework'
     end
     
 end
